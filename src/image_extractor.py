@@ -40,10 +40,3 @@ def extract_images(video_path, output_folder, frame_interval=1):
     cap.release()
     print(f"Extraction complete. {saved_count} frames saved to '{output_folder}'.")
 
-# Example usage
-video_file = "path_to_video.mp4"  # Replace with your video file path
-output_dir = "extracted_frames"  # Replace with your desired output folder
-frame_interval = 30  # Save every 30th frame (adjust as needed)
-
-extract_images(video_file, output_dir, frame_interval)
-
