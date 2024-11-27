@@ -3,7 +3,7 @@ from src.image_extract import extract_images
 def main():
 
   # Specify the video name
-  video_file = 'data/videos/test.MOV'
+  video_file = 'data/videos/dog_video.mp4'
   output_dir = 'data/images'
 
   # Extract the frames to data/images
