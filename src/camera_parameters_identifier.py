@@ -1,12 +1,11 @@
-# https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html
-
 import os
 import cv2
 import numpy as np
 
 def process_checkerboards(image_dir):
     """
-    Process images in the directory to extract camera parameters based on checkerboard detection.
+    Process images in the directory to extract camera parameters based on checkerboard detection
+    and save images with detected checkerboards in the same directory.
 
     Args:
         image_dir (str): Path to the directory containing checkerboard images.
@@ -48,6 +47,13 @@ def process_checkerboards(image_dir):
             corners2 = cv2.cornerSubPix(gray, corners, (11, 11), (-1, -1), criteria)
             imgpoints.append(corners2)
 
+            # Draw and save the checkerboard corners
+            annotated_image = cv2.drawChessboardCorners(image, checkerboard_size, corners2, ret)
+            output_file = os.path.join(
+                image_dir, f"{os.path.splitext(image_file)[0]}_checkerboard{os.path.splitext(image_file)[1]}"
+            )
+            cv2.imwrite(output_file, annotated_image)
+
     # Perform camera calibration
     if len(objpoints) < 1 or len(imgpoints) < 1:
         raise ValueError("Not enough checkerboard patterns detected for calibration.")
@@ -61,4 +67,3 @@ def process_checkerboards(image_dir):
     cy = mtx[1, 2]  # Principal point y-coordinate
 
     return {'fx': fx, 'fy': fy, 'cx': cx, 'cy': cy}
-
