@@ -1,6 +1,5 @@
 from src.image_extract import extract_frames
 
-
 def main():
 
   # Specify the video name
