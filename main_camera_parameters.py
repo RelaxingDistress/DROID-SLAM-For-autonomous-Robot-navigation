@@ -1,3 +1,4 @@
+from src.camera_paramters_identifier import process_checkerboards
 from src.image_extractor import extract_images
 
 import numpy as np
