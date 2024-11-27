@@ -1,4 +1,4 @@
-from src.image_extract import extract_images
+from src.image_extractor import extract_images
 
 def main():
 
