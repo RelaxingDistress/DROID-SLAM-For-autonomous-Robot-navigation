@@ -3,7 +3,9 @@ from src.image_extractor import extract_images
 
 import numpy as np
 import os
-
+if not os.path.exists('C:/Users/mangl/OneDrive/Desktop/Navigator_project/Data/checkerboardVideo.mp4'):
+    print("File does not exist.")
+"""
 def main():
     # Specify the video name and output directory
     video_file = 'C:/Users/mangl/OneDrive/Desktop/Navigator_project/Data/checkerboardVideo.mp4'
@@ -36,3 +38,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+"""
