@@ -6,7 +6,7 @@ import os
 
 def main():
     # Specify the video name and output directory
-    video_file = 'checkerboardVideo.mp4'
+    video_file = '/content/checkerboardVideo.mp4'
     output_dir = '/content/output'
     output_file = os.path.join(output_dir, 'camera_parameters.txt')
 
