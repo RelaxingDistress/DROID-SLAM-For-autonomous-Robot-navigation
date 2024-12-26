@@ -3,8 +3,12 @@ from src.image_extractor import extract_images
 
 import numpy as np
 import os
-if not os.path.exists("C:/Navigator_project/Data/checkerboardVideo.mp4"):
+video_file = r'C:\Navigator_project\Data\checkerboardVideo.mp4'
+if os.path.exists(video_file):
+    print("File exists!")
+else:
     print("File does not exist.")
+
 """
 def main():
     # Specify the video name and output directory
