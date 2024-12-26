@@ -6,8 +6,8 @@ import os
 
 def main():
     # Specify the video name and output directory
-    video_file = 'data/videos/checkerboard.mp4'
-    output_dir = 'data/checkerboard'
+    video_file = 'C:\Users\mangl\OneDrive\Desktop\Navigator_project\Data\checkerboardVideo.mp4'
+    output_dir = 'C:\Users\mangl\OneDrive\Desktop\Navigator_project\Data\checkerboard'
     output_file = os.path.join(output_dir, 'camera_parameters.txt')
 
     # Ensure output directory exists
