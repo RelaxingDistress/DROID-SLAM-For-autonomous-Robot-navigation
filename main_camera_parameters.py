@@ -3,7 +3,7 @@ from src.image_extractor import extract_images
 
 import numpy as np
 import os
-if not os.path.exists("C:\Navigator_project\Data\checkerboardVideo.mp4"):
+if not os.path.exists("C:/Navigator_project/Data/checkerboardVideo.mp4"):
     print("File does not exist.")
 """
 def main():
