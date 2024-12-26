@@ -3,17 +3,11 @@ from src.image_extractor import extract_images
 
 import numpy as np
 import os
-video_file = r'C:\Navigator_project\Data\checkerboardVideo.mp4'
-if os.path.exists(video_file):
-    print("File exists!")
-else:
-    print("File does not exist.")
 
-"""
 def main():
     # Specify the video name and output directory
-    video_file = 'C:/Users/mangl/OneDrive/Desktop/Navigator_project/Data/checkerboardVideo.mp4'
-    output_dir = 'C:/Users/mangl/OneDrive/Desktop/Navigator_project/Data/checkerboard'
+    video_file = 'checkerboardVideo.mp4'
+    output_dir = '/content/output'
     output_file = os.path.join(output_dir, 'camera_parameters.txt')
 
     # Ensure output directory exists
@@ -42,4 +36,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-"""
