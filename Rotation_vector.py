@@ -113,12 +113,4 @@ def save_ply(vertices, faces, output_file):
 
 save_ply(rotated_vertices, faces, output_file)
 
-# Step 7: Push the Rotated File to GitHub (Optional)
-!git config --global user.name "RelaxingDistress"  # Replace with your GitHub username
-!git config --global user.email "mvijla23@gmail.com.com"  # Replace with your GitHub email
-!git clone https://github.com/RelaxingDistress/DROID-SLAM-For-autonomous-Robot-navigation.git
-!mv "$output_file" DROID-SLAM-For-autonomous-Robot-navigation/  # Move the file to your GitHub repository
-%cd DROID-SLAM-For-autonomous-Robot-navigation
-!git add aligned_floor.ply
-!git commit -m "Added aligned PLY file"
-!git push
+
