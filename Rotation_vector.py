@@ -16,8 +16,14 @@ output_file = "./aligned_floor.ply"
 if not os.path.exists(drive_ply_file):
     raise FileNotFoundError(f"File not found in Google Drive: {drive_ply_file}")
 
-!cp "$drive_ply_file" "$local_ply_file"
+# Copy the file from Google Drive to the working directory
+import shutil
+if not os.path.exists(drive_ply_file):
+    raise FileNotFoundError(f"File not found in Google Drive: {drive_ply_file}")
+
+shutil.copy(drive_ply_file, local_ply_file)
 print(f"Copied PLY file from Google Drive: {drive_ply_file}")
+
 
 # Load the .ply file
 ply_data = PlyData.read(local_ply_file)
