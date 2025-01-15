@@ -19,7 +19,7 @@ evo
 # metric3d
 xformers == 0.0.21
 mmengine
-mmcv
+#mmcv
 timm
 html4vision
 plyfile
