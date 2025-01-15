@@ -1,3 +1,5 @@
+# Install necessary libraries
+!pip install plyfile open3d
 import numpy as np
 from plyfile import PlyData, PlyElement
 import open3d as o3d
